@@ -195,6 +195,14 @@
 +        }
 +    }
 +
++
++     /**
++      * returns the PotionEffect for the supplied Potion Id if it is active, null otherwise.
++      */
++     public PotionEffect getActivePotionEffect(int potionId) {
++        return (PotionEffect)this.activePotionsMap.get(Integer.valueOf(potionId));
++     }
++
 +    /**
 +     * Returns true if the entity's rider (EntityPlayer) should face forward when mounted.
 +     * currently only used in vanilla code by pigs.
@@ -206,4 +214,5 @@
 +    {
 +        return this instanceof EntityPig;
 +    }
+
  }
